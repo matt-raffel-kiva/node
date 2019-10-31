@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "node";
+
+service BootNode {
+  rpc AddLink (LinkRequest) returns (LinkReply);
+}
+
+message LinkRequest {
+  string clientAddr = 1;
+}
+
+message LinkReply {
+  string message = 1;
+}
+
